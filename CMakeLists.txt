@@ -1,5 +1,10 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.16)
+project(segments_game)
 
-project("Joc Segmente")
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(main main.cpp)
+set(SG_SOURCES main.cpp)
+
+add_executable(sg_game ${SG_SOURCES})
+
+install(TARGETS sg_game ARCHIVE DESTINATION bin)
